@@ -25,3 +25,20 @@ function faus_frequent_auto_update_scheduler( $event ) {
 
 	return $event;
 }
+
+add_filter( 'pre_set_site_transient_update_core', 'faus_force_autoupdate_response', 10, 1 );
+/**
+ * If an 'upgrade' is shown as available in a WordPress.org API response, modify it it 'autoupdate'
+ * so that the update goes through before we're chosen. ;)
+ *
+ * @param object $value Response data from the api request.
+ *
+ * @return object Possibly modified response data for the api request.
+ */
+function faus_force_autoupdate_response( $value ) {
+	if ( isset( $value->updates[0]->response ) && 'upgrade' === $value->updates[0]->response ) {
+		$value->updates[0]->response = 'autoupdate';
+	}
+
+	return $value;
+}

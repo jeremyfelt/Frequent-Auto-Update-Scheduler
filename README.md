@@ -4,3 +4,5 @@ I was impatient, so I made a plugin that forces auto updates to happen a little 
 
 * Sets the cron timing on `wp_maybe_auto_update` to hourly rather than twicedaily to speed things up on release day. :)
 * Modifies the API response from WordPress.org to return `autoupdate` when an `upgrade` response is received.
+
+See [this gist](https://gist.github.com/nacin/7047909) for other troubleshooting possibilities.

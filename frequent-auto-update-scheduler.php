@@ -2,7 +2,7 @@
 /*
 Plugin Name: Frequent and Forced Auto Update Scheduler
 Plugin URI: http://github.com/jeremyfelt/frequent-auto-update-scheduler
-Description: Sets the cron timing on `wp_maybe_auto_update` to hourly rather than twicedaily to speed things up on release day. :)
+Description: Cures impatience. Forces WordPress auto updates to happen faster.
 Version: 0.1
 Author: Jeremy Felt
 Author URI: http://jeremyfelt.com/
